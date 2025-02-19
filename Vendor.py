@@ -13,7 +13,7 @@ class TestVendor(unittest.TestCase):
         vend = Vendor();
         num = vend.getNumber();
         for elem in num:
-            self.assertIsInstance(elem, int);
+            self.assertIsInstance(int(elem), int);
             
 
 # Поставщик
@@ -21,5 +21,5 @@ class Vendor:
     # Метод Получения числа
     def getNumber(self):
         # todo реализовать метод получения return значения
-        return [3, 2, 1]; # [число, разбитое на вектор чисел]
+        return ['3', '2', '1']; # [число, разбитое на вектор чисел]
         
