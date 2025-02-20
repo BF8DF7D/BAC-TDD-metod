@@ -1,4 +1,4 @@
-from IGamer import *;
+from IGamer import IGamer;
 from unittest.mock import patch;
 import unittest;
 import logging;

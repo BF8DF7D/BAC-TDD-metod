@@ -1,6 +1,7 @@
 
 from RandomNumbers import *;
 from Gamer import *;
+from CmpGamer import *;
 import unittest;
 
 
