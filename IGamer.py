@@ -1,12 +1,12 @@
-from abc import ABC, abstractmethod;
+from abc import ABC, abstractstaticmethod
 
 class IGamer(ABC):
     
-    @abstractmethod
-    def getHidden(self):
+    @abstractstaticmethod
+    def getHidden():
         pass;
         
-    @abstractmethod
-    def getAttempt(self):
+    @abstractstaticmethod
+    def getAttempt():
         pass;
     
