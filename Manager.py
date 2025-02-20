@@ -17,6 +17,8 @@ class TestManager(unittest.TestCase):
         self.assertEqual(1, manag.getEqualNumbers('2', ['3','2','1']));
         self.assertEqual(2, manag.getEqualNumbers('1', ['3','2','1']));
         self.assertEqual(-1, manag.getEqualNumbers('0', ['3','2','1']));
+        for i in range(4, 10):
+            self.assertEqual(-1, manag.getEqualNumbers(str(i), ['3','2','1']));
         logging.info(" ТЕСТ: Manager.getEqualNumbers: return значения: успешно");
     
     
@@ -28,11 +30,11 @@ class Manager:
     # Сравнение попытки с угадываемым числом
     def getEqualNumbers(self, att, hidden):
         # todo реализовать метод поиска числа и возврата позиции.
-        match att:
-            case '3': return 0;
-            case '2': return 1;
-            case '1': return 2;
-            case '0': return -1;
+        int_att = int(att) # числовое значение сивола цифры
+        if (int_att <= 3 and int_att >= 1):
+            return 3 - int_att;
+        if (int_att == 0 or int_att > 3):
+            return -1;
 
 
 
