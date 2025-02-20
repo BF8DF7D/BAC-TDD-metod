@@ -2,6 +2,9 @@ import unittest
 from IGamer import *
 import logging
 
+# Настройка логирования
+logging.basicConfig(level=logging.INFO)
+
 # Тест класса Поставщик
 class TestVendor(unittest.TestCase):
     
@@ -21,15 +24,21 @@ class TestVendor(unittest.TestCase):
     
     def test_return_getAttempt(self):
         vend = Vendor();
-        self.assertEquals('1', vend.getAttempt());
+        atts = vend.getAttempt()
+        self.assertEquals('1', next(atts));
+        self.assertEquals('2', next(atts));
+        self.assertEquals('3', next(atts));
         logging.info(" ТЕСТ: Vendor.getAttempt: return значения: успешно");
 
 # Поставщик
 class Vendor(IGamer):
+    iterabl = ['1', '2', '3']
+        
     def getNumber(self):
         # todo реализовать метод получения return значения
         return ['3', '2', '1']; # [число, разбитое на вектор чисел]
 
     def getAttempt(self):
         # todo реализовать метод получения return значения
-        return '1';
+        for itel in iter(self.iterabl): 
+            yield itel;

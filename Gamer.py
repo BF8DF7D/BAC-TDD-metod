@@ -7,7 +7,7 @@ class TestGamer(unittest.TestCase):
     
     def test_createGamer(self):
         gam = Gamer();
-        self.assertIsNotNone(Gamer);
+        self.assertIsNotNone(gam);
         logging.info(" ТЕСТ: Gamer: создание экземпляра: успешно");
         
     def test_return_getNumber(self):
@@ -20,6 +20,12 @@ class TestGamer(unittest.TestCase):
         gam = Gamer();
         with patch('builtins.input', return_value="1"):
             self.assertEqual("1", gam.getAttempt());
+        with patch('builtins.input', return_value="2"):
+            self.assertEqual("2", gam.getAttempt());
+        with patch('builtins.input', return_value="3"):
+            self.assertEqual("3", gam.getAttempt());
+        with patch('builtins.input', return_value="0"):
+            self.assertEqual("0", gam.getAttempt());
         logging.info(" ТЕСТ: Gamer.getAttempt: return значения: успешно");
 
 # Игрок 
