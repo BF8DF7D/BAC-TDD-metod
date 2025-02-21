@@ -23,23 +23,23 @@ class Test_Gamer(unittest.TestCase):
 class Gamer(IGamer):
     
     # Загадывание числа
-    def getHidden():
+    def getHidden(msg = "", err_msg = "", end_chr = ""):
         while True: 
-            num_hid = input(" Загадайте число: ");            
+            num_hid = input(msg);            
             try:
                 int(num_hid);            
                 return [char_num for char_num in num_hid];
             except ValueError:
-                pass
+                print(err_msg, end=end_chr);
         
         
     # Попытка отгадать цифру
-    def getAttempt():
+    def getAttempt(msg = "", err_msg = "", end_chr = ""):
         while True:
-            num_att = input(" Введите отгадку: ");
+            num_att = input(msg);
             try:
                 int(num_att);
                 if len(num_att) == 1:
                     return num_att;
             except ValueError:
-                pass;
+                print(err_msg, end=end_chr);

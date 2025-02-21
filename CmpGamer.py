@@ -8,6 +8,8 @@ import logging;
 class Test_CmpGamer(unittest.TestCase):
     
     # Тест getHidden: покрытие всех значений
+    # Проверяет все числа в указаном промежутке длинны
+    # масивы длинной от 3 до 5
     def test_fullrandom_getHidden(self):
         TEST_RANGE = 50;
         BASE_RANDOM = 3
@@ -36,13 +38,13 @@ class Test_CmpGamer(unittest.TestCase):
 class CmpGamer(IGamer):
     
     # Загадывание числа
-    def getHidden():
+    def getHidden(msg = "", err_msg = "", end_chr = ""):
         return [RandomNumbers.getCharNumber() 
                 for _ in range(random.randint(3, 5))];
         
             
     # Попытка отгадать цифру
-    def getAttempt():
+    def getAttempt(msg = "", err_msg = "", end_chr = ""):
         return RandomNumbers.getCharNumber();
 
     

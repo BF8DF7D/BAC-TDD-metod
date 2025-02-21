@@ -5,6 +5,7 @@ import logging;
 class Test_RandomNumbers(unittest.TestCase):
     
     # Тест getCharNumber: покрытие всех значений
+    # генерация всех цифор в виде символа
     def test_fullrandom_getCharNumber(self):
         
         TEST_RANGE = 50;
