@@ -6,24 +6,24 @@ import logging;
 class Test_Gamer(unittest.TestCase):
     
     # Тест getHidden: считывание числа
-    def test_return_getHidden(self):
+    def test_return_getNumber(self):
         inp_vector = ["", " ", "123fgag", "1345,34", "1345.34", "1345"];
         with patch('builtins.input', side_effect = inp_vector):
-            self.assertEqual(['1', '3', '4', '5'], Gamer.getHidden());
-        logging.debug("Gamer.getHidden: считывание числа: успешно");
+            self.assertEqual(['1', '3', '4', '5'], Gamer.getNumber());
+        logging.debug("Gamer.getNumber: считывание числа: успешно");
     
     # Тест getAttempt: считывание числа
-    def test_return_getAttempt(self):
+    def test_return_getOneNumber(self):
         inp_vector = ["", " ", "123fgag", "1345,34", "1345.34", "1345", "5"];
         with patch('builtins.input', side_effect = inp_vector):
-            self.assertEqual('5', Gamer.getAttempt());
-        logging.debug("Gamer.getAttempt: считывание числа: успешно");
+            self.assertEqual('5', Gamer.getOneNumber());
+        logging.debug("Gamer.getOneNumber: считывание числа: успешно");
 
 
 class Gamer(IGamer):
     
     # Загадывание числа
-    def getHidden(msg = "", err_msg = "", end_chr = ""):
+    def getNumber(msg = "", err_msg = "", end_chr = ""):
         while True: 
             num_hid = input(msg);            
             try:
@@ -34,7 +34,7 @@ class Gamer(IGamer):
         
         
     # Попытка отгадать цифру
-    def getAttempt(msg = "", err_msg = "", end_chr = ""):
+    def getOneNumber(msg = "", err_msg = "", end_chr = ""):
         while True:
             num_att = input(msg);
             try:

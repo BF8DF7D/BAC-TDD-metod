@@ -10,7 +10,7 @@ class Test_CmpGamer(unittest.TestCase):
     # Тест getHidden: покрытие всех значений
     # Проверяет все числа в указаном промежутке длинны
     # масивы длинной от 3 до 5
-    def test_fullrandom_getHidden(self):
+    def test_fullrandom_getNumber(self):
         TEST_RANGE = 50;
         BASE_RANDOM = 3
         STOP = False;
@@ -20,7 +20,7 @@ class Test_CmpGamer(unittest.TestCase):
         test_step = 0;
         
         while not STOP:
-            rend_gener = CmpGamer.getHidden();
+            rend_gener = CmpGamer.getNumber();
             random_res[len(rend_gener) - BASE_RANDOM] = True;
             
             if (random_res == data):
@@ -32,19 +32,19 @@ class Test_CmpGamer(unittest.TestCase):
                 
             test_step += 1;
 
-        logging.debug("CmpGamer.getHidden: покрытие значений: успешно")
+        logging.debug("CmpGamer.getNumber: покрытие значений: успешно")
 
 
 class CmpGamer(IGamer):
     
     # Загадывание числа
-    def getHidden(msg = "", err_msg = "", end_chr = ""):
+    def getNumber(msg = "", err_msg = "", end_chr = ""):
         return [RandomNumbers.getCharNumber() 
                 for _ in range(random.randint(3, 5))];
         
             
     # Попытка отгадать цифру
-    def getAttempt(msg = "", err_msg = "", end_chr = ""):
+    def getOneNumber(msg = "", err_msg = "", end_chr = ""):
         return RandomNumbers.getCharNumber();
 
     

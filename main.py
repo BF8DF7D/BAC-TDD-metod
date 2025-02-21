@@ -1,3 +1,4 @@
+from Rule import *;
 
 from RandomNumbers import *;
 from Gamer import *;
