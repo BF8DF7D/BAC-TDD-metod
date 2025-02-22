@@ -20,9 +20,8 @@ class Test_RPresenceNums(unittest.TestCase):
 
 class RPresenceNums(IRule):
     
-    def cheackRule(*args):
-        att, hid = args;
-        
+    def cheackRule(att, hid):
+    
         # удаление дублей
         att_set = [];
         for num_att in att:

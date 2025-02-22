@@ -1,4 +1,5 @@
 from Rule import *;
+from Mode import *;
 
 from RandomNumbers import *;
 from Gamer import *;
