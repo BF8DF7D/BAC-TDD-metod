@@ -5,7 +5,7 @@ import logging;
 
 class Test_RPositionsNums(unittest.TestCase):
     
-    def test_instanse_RPositionsNums(self):
+    def test_instanse(self):
         self.assertIsNotNone(RPositionsNums());
         logging.debug("RPresenceNums: создание экземпляра объекта: успешно");
     
@@ -15,14 +15,12 @@ class Test_RPositionsNums(unittest.TestCase):
         
         self.assertEqual([True], 
                          RPositionsNums.cheackRule(att, hid))
-        logging.debug("RPositionNums.cheackRule: совпадение пазиций: успешно");
+        logging.debug("RPositionNums.cheackRule: совпадение позиций: успешно");
         
 
 class RPositionsNums(IRule):
     
     def cheackRule(att, hid):
-        print(att, hid);
-        
         result = [];
         for i in range(len(att)): 
             if (att[i] == hid[i]):

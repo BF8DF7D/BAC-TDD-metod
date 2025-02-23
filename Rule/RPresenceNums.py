@@ -5,7 +5,7 @@ import logging;
 
 class Test_RPresenceNums(unittest.TestCase):
     
-    def test_instanse_RPresenceNums(self):
+    def test_instanse(self):
         self.assertIsNotNone(RPresenceNums());
         logging.debug("RPresenceNums: создание экземпляра объекта: успешно");
 

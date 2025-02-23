@@ -11,6 +11,9 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %
 
 if __name__ == "__main__":
     unittest.main();
+    mode = MGuessNumEntirely();
+    
+    mode.mainCycle();
     
    # Gamer.getHidden();
     
