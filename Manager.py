@@ -30,7 +30,10 @@ class Manager:
     # Сравнение попытки с угадываемым числом
     def getEqualNumbers(self, att, hidden):
         # todo реализовать метод поиска числа и возврата позиции.
-        int_att = int(att) # числовое значение сивола цифры
+        try:
+            int_att = int(att) # числовое значение сивола цифры
+        except ValueError:
+            return -1;
         if (int_att <= 3 and int_att >= 1):
             return 3 - int_att;
         if (int_att == 0 or int_att > 3):

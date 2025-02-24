@@ -2,8 +2,6 @@ import unittest
 from IGamer import *
 import logging
 
-# Настройка логирования
-logging.basicConfig(level=logging.INFO)
 
 # Тест класса Поставщик
 class TestVendor(unittest.TestCase):

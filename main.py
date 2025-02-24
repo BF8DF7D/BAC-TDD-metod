@@ -1,7 +1,11 @@
-from Vendor import *;
-from Manager import *;
-from Gamer import *;
+from Vendor import Vendor, TestVendor;
+from Manager import Manager, TestManager;
+from Gamer import Gamer, TestGamer;
 from functools import reduce;
+import logging;
+import unittest;
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(msg)s')
 
 if __name__ == '__main__':
 
